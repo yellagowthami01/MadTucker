@@ -1,0 +1,19 @@
+<div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Place Bet</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <div ng-if="errorMsg" class="text-danger text-center">{{errorMsg}}</div>
+        	<div class="form-horizontal">
+            <div class="form-group" ng-repeat="truck in params.trucks" ng-if="$index < params.truckersCount">
+            	<label for="" class="col-sm-3">Trucker ({{$index + 1}}) ({{truck.style.color |uppercase}})</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" ng-model="truck.value">
+							</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>

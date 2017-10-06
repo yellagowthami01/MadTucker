@@ -1,0 +1,20 @@
+.racetrack tr td.track {
+  width: calc(100% - 40px);
+  background: rgba(0, 0, 0, 0.5);
+  padding-left: 0;
+}
+.racetrack tr td.finish {
+  width: 40px;
+  background-image: url('../../assets/racing-stripes.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fa-truck {
+  font-size: 40px;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  display: inline-block;
+}

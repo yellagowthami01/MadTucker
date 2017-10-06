@@ -1,0 +1,30 @@
+<div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Game Setup</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                        <label for="" class="col-sm-3">Player Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" ng-model="params.playerName">
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="" class="col-sm-3">Number of truckers</label>
+                    <div class="col-sm-9">
+                        <select ng-model="params.truckersCount" class="form-control" ng-options="truck as truck for truck in truckersArray"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="" class="col-sm-3">Initial Funds(<span class="fa fa-dollar fa-lg"></span>)</label>
+                    <div class="col-sm-9">
+
+                        <input type="text" class="form-control" ng-model="params.initalBet" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>

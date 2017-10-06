@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="col-sm-12">
+		<div class="pull-right">
+			<span class="fa fa-user fa-lg"></span>
+			Inital Amount : 
+			<span class="credits"><span class="fa fa-dollar"></span>{{gameParams.initalBet}}</span>
+			Current Amount :
+			<span class="credits"><span class="fa fa-dollar"></span>{{gameParams.balanceAmount}}</span>
+
+		</div>
+	</div>
+	<div class="col-sm-12">
+	<h1 class="text-center">Mad Trucker</h1>
+</div>
+<div class="col-sm-12" ng-show="announceWinner">
+		<div class="alert alert-danger">
+			<strong>Congratulations!</strong> You have won the race.
+		</div>
+	</div>
+	<div class="col-sm-12 text-center">
+		<button class="btn btn-primary btn-md" ng-click="reset()" ng-disabled="raceInProgress">Reset</button>
+	</div>
+	<div class="col-sm-12">
+		<table class="table table-bordered table-striped racetrack">
+			<tr ng-repeat="truck in trucks">
+				<td class="track">
+					<span class="fa fa-truck" ng-style="truck.style"></span>
+				</td>
+				<td class="finish"></td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-sm-12 text-center">
+		<button class="btn btn-warning btn-md" ng-click="bet()" ng-disabled="raceInProgress">Place Bet</button>
+		<button class="btn btn-danger btn-md" ng-click="start()" ng-disabled="!betIsPlaced">Start Race</button>
+
+	</div>
+
+</div>
