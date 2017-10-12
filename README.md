@@ -9,6 +9,6 @@ To run the project,
 4. Go to Project folder
 5. run live-server
 
-It will create server environment to test the code.
+It will create server environment to test the project.
 
 
